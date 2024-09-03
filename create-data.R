@@ -1,3 +1,4 @@
+# The dataset comes from the R packages "choroplethr" and "choroplethrMaps"
 library(choroplethr)
 library(choroplethrMaps)
 library(dplyr)
@@ -12,4 +13,4 @@ head(county.regions)
 df = inner_join(df_pop_county, county.regions) |>
   rename("population" = "value")
 
-write_csv(df, 'polars-pandas/county_data.csv')
+write_csv(df, 'county_data.csv')
